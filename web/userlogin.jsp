@@ -160,22 +160,22 @@
     </head>
     <body>
         <div class="bac">
-         <div class="picture2">
-                
+            <div class="picture2">
+
 
             </div>
-           
+
             <div class="picture">
                 <div class="picture1">
                     <img src="images/1.png" width=150 height=150 />
                 </div>
             </div>
             <form action="loginservlet" method="post">
-                
+
                 <div class="text">
                     <div class="text11">
                         <div class="text1">
-                            <h2><label for="uid">—ß∫≈/π§∫≈</label></h2>
+                            <h3><label for="uid">—ß∫≈/π§∫≈</label></h3>
                         </div>
                         <div class="text2">
                             <div class="text3">
@@ -185,7 +185,7 @@
                     </div>
                     <div class="text12">
                         <div class="text1">
-                            <h2><label for="username">√‹¬Î</label></h2>
+                            <h3><label for="username">√‹¬Î</label></h3>
                         </div>
                         <div class="text2">
                             <div class="text3">
@@ -193,7 +193,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="text12">
+                        <div class="text1">
+                            <h3><label for="select" style="height:30px;width:200px;border:2px solid #e12516;border-radius:10px;">—°‘Ò‘∞«¯</label></h3>
+                        </div>
+                        <div class="text2">
+                            <div class="text3">
+
+                                <select name="yuan">
+                                    <option value="1">È≈‘∞</option>
+                                    <option value="2">√∑‘∞</option>
+                                    <option value="3">÷«‘∞</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
+
+
                 <div class="showbt2">
                     <div class="showbt11">
 

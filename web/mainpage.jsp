@@ -167,7 +167,7 @@
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
                         <div class="head">
-                           
+
                         </div>
                     </li>
                     <li class="nav-item">
@@ -191,7 +191,7 @@
 
 
 
-<center>
+<!--<center>
     <form action ="yselected.jsp" method=post name="form" id="form"  >
 
         <h5>选择园区：</h5> <select name="yuan">
@@ -204,8 +204,66 @@
     </form>
 
 </center>
+-->
+
+<center>
+<%
+    request.setCharacterEncoding("gb2312");
+    ResultSet rs;
+    String yid = (String) session.getAttribute("yuan");
+
+    try {
+
+        PreparedStatement sql = DB.dbCon().prepareStatement("SELECT * FROM yuan where yid=?");
+
+        sql.setString(1, yid);
+
+        rs = sql.executeQuery();
+        if (rs.next()) {
+            out.print("<table border=2>");
+            out.print("<tr>");
+            out.print("<th width=150>" + "园号");
+
+            out.print("<th width=150>" + "园名");
+            out.print("<th width=150>" + "宿舍数");
+            out.print("<th width=150>" + "已分配宿舍");
+
+            out.print("<th width=150>" + "房型");
+            out.print("<th width=150>" + "房费");
+
+            out.print("</TR>");
+
+            out.print("<tr>");
+            out.print("<td>" + rs.getString(1) + "</td>");
+            out.print("<td>" + rs.getString(2) + "</td>");
+
+            out.print("<td>" + rs.getInt(3) + "</td>");
+            out.print("<td>" + rs.getInt(4) + "</td>");
+            out.print("<td>" + rs.getString(5) + "</td>");
+            out.print("<td>" + rs.getString(6) + "</td>");
+
+            out.print("</tr>");
+
+            out.print("</table");
+
+        }
+        session.setAttribute("yid", rs.getString(1));
+    } catch (SQLException e) {
+        out.print(e);
+    }
+
+%> 
+</center>
+<div class="search">
+    <div class="search1">
+        <form action="result.jsp" method="post" style="width:500px;margin: 0 auto;" name=form>
+            <input type="text" name="search" style="width:430px;margin: 0 auto;" placeholder="请输入学号/身份证号/寝室号...">
+            <button class="button" type="submit" >搜索</button>
+        </form>
+    </div>
 
 
+</div>  
 <div class="jumbotron text-center" style="bottom:0;position: fixed;width: 100%;">
     <div class="foot">
         <p>Provided by Yusong Wang, Kai Wang, Yuru Wang from SWUFE, in December, 2019</p>

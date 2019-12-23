@@ -41,13 +41,15 @@ public class loginservlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");   //必须的
+        
         loginbean rr = new loginbean();//loginbean对象
         HttpSession ss = request.getSession(true);
         ss.setAttribute("loginbean", rr);
 
         String id = request.getParameter("id");
         String pwd = request.getParameter("password");
-
+        String yname=request.getParameter("yuan");
+        ss.setAttribute("yuan", yname);
         if (!id.equals(null) && !pwd.equals(null)) {
             try {
                 PreparedStatement ps = DB.dbCon().prepareStatement("select * from user where userid=? and pwd=?");
