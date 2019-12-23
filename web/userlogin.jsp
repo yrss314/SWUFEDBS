@@ -170,7 +170,7 @@
                     <img src="images/1.png" width=150 height=150 />
                 </div>
             </div>
-            <form action="loginservlet" method="post">
+            <form action="loginservlet" method="post" >
 
                 <div class="text">
                     <div class="text11">
@@ -195,12 +195,12 @@
                     </div>
                     <div class="text12">
                         <div class="text1">
-                            <h3><label for="select" style="height:30px;width:200px;border:2px solid #e12516;border-radius:10px;">Ñ¡ÔñÔ°Çø</label></h3>
+                            <h3><label for="select" >Ñ¡ÔñÔ°Çø</label></h3>
                         </div>
                         <div class="text2">
                             <div class="text3">
 
-                                <select name="yuan">
+                                <select name="yuan"  style="height:30px;width:200px;border:2px solid #e12516;border-radius:10px;">
                                     <option value="1">éÅÔ°</option>
                                     <option value="2">Ã·Ô°</option>
                                     <option value="3">ÖÇÔ°</option>
@@ -214,7 +214,7 @@
 
 
                 </div>
-
+                <div class="showbt2"></div>
 
                 <div class="showbt2">
                     <div class="showbt11">
